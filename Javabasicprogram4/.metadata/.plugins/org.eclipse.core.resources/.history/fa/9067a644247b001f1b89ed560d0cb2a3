@@ -1,0 +1,22 @@
+package sampletestng2;
+
+import org.testng.annotations.Test;
+
+public class example3 {
+	@Test(priority = 0)
+	public void composemail() {
+		System.out.println("compose mail");
+	}
+
+	@Test(priority = 1)
+	public void checksentitems() {
+		System.out.println("checksentitems");
+	}
+}
+
+public class example3 {
+	@Test(priority = 0)
+	public void composemail() {
+		System.out.println("compose mail");
+	}
+}

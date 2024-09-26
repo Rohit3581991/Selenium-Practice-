@@ -1,0 +1,19 @@
+package day1.browseropening;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Executeautomationpage {
+	static WebDriver driver;
+	public static void main(String[] args) {
+		setUp("Chrome");
+		driver.get("http://www.executeautomation.com");
+		driver.close();
+	}
+	public static void setUp(String browserName) {
+		if (browserName.equalsIgnoreCase("chrome")) {
+			System.setProperty("webdriver.chrome.driver", ".\\executables\\chromedriver.exe");
+			driver = new ChromeDriver();
+		}
+	}
+}

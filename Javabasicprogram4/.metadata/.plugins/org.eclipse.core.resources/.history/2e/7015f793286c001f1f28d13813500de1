@@ -1,0 +1,12 @@
+package seleniumproject1;
+
+import org.openqa.selenium.WebDriver;
+
+public class Basicfunction {
+	static WebDriver driver;	
+	public static void main(String[] args) {
+	setUp("Chrome");	
+
+}
+	private static void setUp(String string) 
+	}

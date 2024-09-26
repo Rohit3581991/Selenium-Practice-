@@ -1,0 +1,21 @@
+package mavenbasicexample;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Handlecheckbox {
+
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.redbus.in/search?fromCityName=Wagholi,%20Pune&fromCityId=71880&srcCountry=IND&toCityName=Ashirwad%20Theatre,%20Nagpur&toCityId=76974&destCountry=IND&onward=29-Sep-2024&opId=0&busType=Any");
+		//select specific checkboxes
+		driver.findElement(By.cssSelector("label[title='SEATER']")).clear();
+		// select multiple checkboxes
+	//	driver.findElement(By.xpath(""))
+	}
+
+}

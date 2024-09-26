@@ -1,0 +1,30 @@
+package mavenbasicexample;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+
+import utilities.SeleniumUtility;
+
+public class ActiTimeProgram {
+
+	public static void main(String[] args)  {
+		FileInputStream fis=new FileInputStream(".\\src\\test\\resources\\testData\\AppData.properties");
+		Properties prop=new Properties();
+		prop.load(fis);
+		String browser=prop.getProperty("browserName")
+		String Url=prop.getProperty("appUrl")
+		String expectedLoginPageTitle=prop.getProperty("expectedLoginPageTitle")
+		String userName=prop.getProperty("username")
+		String password=prop.getProperty("password")
+		String expectedHomePageTitle=prop.getProperty("expectedLoginPageTitle")
+		SeleniumUtility.setUp(browser,Url);
+		SeleniumUtility.driver.findElement(By.id("username")).sendKeys(userName);
+		SeleniumUtility.driver.findElement(By.name("pwd")).sendKeys(password);
+		
+		
+	}
+}
+
+
